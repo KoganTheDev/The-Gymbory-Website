@@ -1,6 +1,7 @@
 # Project Wonderful Website
 
 Welcome to our wonderful website project! 🚀
+![Penguin codes](images&gifs/Penguin Coding.gif)
 
 ## Team Members
 
