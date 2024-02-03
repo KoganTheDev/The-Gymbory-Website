@@ -1,7 +1,8 @@
 # Project Wonderful Website
 
+
+<img src="https://github.com/KoganTheDev/architecture_Task1/blob/3c5b2b712f6fac6673b863ba2aa5a0c798ff3179/images%26gifs/Penguin%20Coding.gif" alt="Penguin writes code" width="400"/>
 Welcome to our wonderful website project! 🚀
-![Penguin codes](images&gifs/Penguin Coding.gif)
 
 ## Team Members
 
