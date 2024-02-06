@@ -10,7 +10,7 @@ This project is being developed by a team of 6 talented individuals who are pass
 
 - Yuval Kogan
 - Yaniv Bodga
-- Ben Live
+- Benaya Leib
 - Almog Raz
 - Itay
 - Eden Moshe
