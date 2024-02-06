@@ -1,0 +1,7 @@
+.inputField {
+    border: 3px solid #000000;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
