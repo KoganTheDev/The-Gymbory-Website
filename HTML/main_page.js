@@ -6,7 +6,6 @@ function verifyInput(){
     var height = document.getElementById("height").value;
     var weight = document.getElementById("weight").value;
     var alertMsg = "";
-
     if(((checkName(firstName) == true) || firstName == '')) {
 		alertMsg = alertMsg + "Please enter a right first name.";
 	}
@@ -14,7 +13,7 @@ function verifyInput(){
 		alertMsg = alertMsg + "Please enter a right last name.";
 	}
     if(alertMsg != ''){
-        alert(alertMsg);
+        window.alert(alertMsg);
 }
 	
 
