@@ -11,7 +11,7 @@ function verifyInput(){
 	
    
 	
-Mysubmit.onclick = function(){
+Mysubmit.onclick = function(firstName,lastName){
     if(((checkName(firstName) == true) || firstName == '')) {
 		alertMsg = alertMsg + "Please enter a right first name.";
 	}
