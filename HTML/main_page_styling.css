@@ -10,9 +10,9 @@ body{
 }
 h1{
   text-align: center;
-  color:brown;
+  color:rgb(219, 9, 107);
 }
 h2,h3,h4,h5,h6 {
-  color: #006e00;
+  color: #e200c4;
   text-decoration: underline;
 }
