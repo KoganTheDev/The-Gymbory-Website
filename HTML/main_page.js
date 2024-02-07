@@ -5,14 +5,14 @@ function verifyInput(){
     var age = document.getElementBy("age").value;
     var height = document.getElementById("height").value;
     var weight = document.getElementById("weight").value;
-    var alertMsg = "";
+    var alertMsg = "shalom";
     if(((checkName(firstName) == true) || firstName == '')) {
 		alertMsg = alertMsg + "Please enter a right first name.";
 	}
 	if(((checkName(lastName) == true) || lastName == '')) {
 		alertMsg = alertMsg + "Please enter a right last name.";
 	}
-    if(alertMsg != ''){
+    if(alertMsg == ''){
         window.alert(alertMsg);
 }
 	
