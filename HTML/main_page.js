@@ -18,7 +18,7 @@ function checkName(str){
 
    
 	
-Mysubmit.onclick = function(firstName,lastName){
+Mysubmit.onclick = function(){
     if(((checkName(firstName) == true) || firstName == '')) {
 		//alertMsg = alertMsg + "Please enter a right first name.";
         submitErrorMsg.textContent = "Please enter a right first name.";
