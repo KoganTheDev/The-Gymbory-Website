@@ -27,8 +27,8 @@ Mysubmit.onclick = function(firstName,lastName){
 		//alertMsg = alertMsg + "Please enter a right last name.";
         submitErrorMsg.textContent = "Please enter a right last name."
     }
-    if(alertMsg != ''){
-        alert(alertMsg);
+    //if(alertMsg != ''){
+        //alert(alertMsg);
 }
 }
 
