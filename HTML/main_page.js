@@ -5,15 +5,13 @@ function verifyInput(){
     var age = document.getElementBy("age").value;
     var height = document.getElementById("height").value;
     var weight = document.getElementById("weight").value;
-    var alertMsg = "";
-    const Mysubmit = document.getElementById("InfoButton");
-    const submitErrorMsg = document.getElementById("submitErrorMsg");
+    var alertMsg = "shalom olamy";
     
-//check if there is a digit in a given string
-function checkName(str){
-        return /\d/.test(str); 
+    if(alertMsg != ''){
+        alert(alertMsg);
     }
-    
+    }
+/* 
     if(((checkName(firstName) == true) || firstName == '')) {
 		alertMsg = alertMsg + "Please enter a right first name.";
         
@@ -21,11 +19,11 @@ function checkName(str){
 	if(((checkName(lastName) == true) || lastName == '')) {
 		alertMsg = alertMsg + "Please enter a right last name.";
         
-    }
-    if(alertMsg != ''){
-        alert(alertMsg);
-
-
+   */
+    
+//check if there is a digit in a given string
+function checkName(str){
+    return /\d/.test(str); 
 }
-}
+
 
