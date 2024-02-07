@@ -6,17 +6,22 @@ function verifyInput(){
     var height = document.getElementById("height").value;
     var weight = document.getElementById("weight").value;
     var alertMsg = "";
+    const Mysubmit = document.getElementById("InfoButton");
+    
+	
+   
+	
+Mysubmit.onclick = function(firstName,lastName){
     if(((checkName(firstName) == true) || firstName == '')) {
 		alertMsg = alertMsg + "Please enter a right first name.";
 	}
 	if(((checkName(lastName) == true) || lastName == '')) {
 		alertMsg = alertMsg + "Please enter a right last name.";
-	}
+    }
     if(alertMsg != ''){
         window.alert(alertMsg);
 }
-	
-
+}
 function checkName(str){
         return /\d/.test(str); 
     }
