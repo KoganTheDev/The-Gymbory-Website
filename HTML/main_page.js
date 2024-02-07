@@ -13,23 +13,19 @@ function verifyInput(){
 function checkName(str){
         return /\d/.test(str); 
     }
-
-
-
-   
-	
-Mysubmit.onclick = function(){
+    
     if(((checkName(firstName) == true) || firstName == '')) {
-		//alertMsg = alertMsg + "Please enter a right first name.";
-        submitErrorMsg.textContent = "Please enter a right first name.";
+		alertMsg = alertMsg + "Please enter a right first name.";
+        
 	}
 	if(((checkName(lastName) == true) || lastName == '')) {
-		//alertMsg = alertMsg + "Please enter a right last name.";
-        submitErrorMsg.textContent = "Please enter a right last name."
+		alertMsg = alertMsg + "Please enter a right last name.";
+        
     }
-    //if(alertMsg != ''){
-        //alert(alertMsg);
-}
-}
+    if(alertMsg != ''){
+        alert(alertMsg);
 
+
+}
+}
 
