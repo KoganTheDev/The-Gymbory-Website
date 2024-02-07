@@ -18,7 +18,7 @@
 
     <main>
         <section>
-            <form id="main_page.js">
+            <form id="verifyInput">
                 <h2>Information Gathering</h2>
                 <b>First Name:</b><br>
                 <input type="text" id="firstName" name="firstName"><br><br>
@@ -47,11 +47,10 @@
                 <b>Comments:</b> <br>
                 <textarea id="comments" name="comments" rows="10" cols="30"></textarea><br><br>
                 <!-- <input type="submit" value="Submit"> -->
-                <button type="button" id="InfoButton">submit</button>
+                <button type="button" onclick="verifyInput()">submit</button>
                 <input type="reset" value="Reset">
                 <br><br><br>
-            
-            <p id="submitErrorMsg"></p>
+                
             </form>
         </section>
         
