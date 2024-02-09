@@ -1,13 +1,15 @@
 
 function verifyInput(){
-    var firstName = document.getElementBy("firstName").value;
+    var name = document.getElementBy("firstName").value;
     var lastName = document.getElementBy("lastName").value;
     var age = document.getElementBy("age").value;
     var height = document.getElementById("height").value;
     var weight = document.getElementById("weight").value;
-    var alertMsg = "shalom olamy";
-    
-    if(alertMsg != ''){
+    var alertMsg = "";
+    if(name != 5){
+        alertMsg = alertMsg+"type 5";
+    }
+    if(alertMsg != ""){
         alert(alertMsg);
     }
     }
@@ -22,8 +24,8 @@ function verifyInput(){
    */
     
 //check if there is a digit in a given string
-function checkName(str){
-    return /\d/.test(str); 
-}
+//function checkName(str){
+    //return /\d/.test(str); 
+//}
 
 
