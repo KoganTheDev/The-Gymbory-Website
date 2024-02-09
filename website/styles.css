@@ -92,7 +92,7 @@ body {
     }
   }
 
-  /*==============About section============================*/
+  /*==============About section============================
   #img1_about_section{
     display: block;
     width: 100%;
@@ -128,13 +128,9 @@ body {
     font-size: 50px; 
   }
 
-
-   
- 
  .about_1 {
   max-width: 300%;
   max-height: 600%;
-  
 
  }
  #img2_about_section{
@@ -147,11 +143,79 @@ body {
   position: relative;
   font-size: 20px;
   padding-left: 20px;
-  padding-top: 20%;
-  
-  float: left;
-  color: white;
+  padding-top: 10px;
+  color: whitesmoke;
   font-family: "Montserrat", sans-serif;
+ }
+
+ .about_2 {
+  max-width: 300%;
+  max-height: 600%;
+
+ }
+ #img3_about_section{
+  position: absolute;
+  display: block;
+    width: 100%;
+    height: auto;
+ }
+ #parag2 {
+  position: relative;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  color: whitesmoke;
+  font-family: "Montserrat", sans-serif;
+ }
+*/
+/*==============About section============================*/
+#img1_about_section{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.about_section {
+  position: relative;
+  display: inline-block;
+}
+
+#h1_of_about_section {
+  position: absolute;
+  top: 1%; 
+  left: 50%; 
+  transform: translate(-40%, -50%); 
+  background-color: #000000; 
+  color: #fff; 
+  padding: 10px 20px; 
+  font-size: 50px; 
+  font-family: 'Caveat', cursive;
+  text-align: center;
+}
+  #about_h2{
+    
+    text-align: center;
+    font-family: 'Caveat', cursive; 
+    background-color: #000000; 
+    color: #fff; 
+    top: 95%;
+    left: 40%;
+    font-size: 50px; 
+  }
+
+ .imgOfAbout{
+  width: 100%;
+ }
+.divOfText{
+  background-color: black;
+  margin-top: 0%;
+}
+ .p_of_about{
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  position: sticky;
+
  }
  
 
