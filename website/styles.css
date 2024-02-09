@@ -205,17 +205,22 @@ body {
  .imgOfAbout{
   width: 100%;
  }
+ .container{
+  position: relative;
+  text-align: center;
+  background-color: #000000;
+}
 .divOfText{
   background-color: black;
   margin-top: 0%;
+  text-align: center;
 }
  .p_of_about{
   font-family: "Montserrat", sans-serif;
-  color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-  position: sticky;
-
+  color: white;
+  font-size: 30px;
+  top: 8px;
+  left: 16px;
  }
  
 
