@@ -8,7 +8,7 @@ function phoneMenu() {
   }
 
 
-
+/*===============================BMI claculator===========================*/
   function calculateBMI() {
     var height = parseFloat(document.getElementById('height').value);
     var weight = parseFloat(document.getElementById('weight').value);
@@ -33,3 +33,21 @@ function phoneMenu() {
 
     document.getElementById('result').innerHTML = bmiResult;
 }
+
+
+
+/*===============================verify input in sign up===========================*/
+function verifyInput(){
+  var name = document.getElementBy("firstName").value;
+  var lastName = document.getElementBy("lastName").value;
+  var age = document.getElementBy("age").value;
+  var height = document.getElementById("height").value;
+  var weight = document.getElementById("weight").value;
+  var alertMsg = "";
+  if(name != 5){
+      alertMsg = alertMsg+"type 5";
+  }
+  if(alertMsg != ""){
+      alert(alertMsg);
+  }
+  }
