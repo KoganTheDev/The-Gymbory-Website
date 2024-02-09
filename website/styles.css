@@ -111,7 +111,7 @@ body {
   background-color: #000000; 
   color: #fff; 
   padding: 10px 20px; 
-  font-size: 50px; 
+  font-size: 300%; 
   font-family: 'Caveat', cursive;
   text-align: center;
 }
@@ -195,6 +195,7 @@ body {
   display: table;
   clear: both;
 }
+
 /*=======================Main page - Plans===============*/
   
 * {
