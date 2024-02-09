@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  li,a,button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #164863;
+    text-decoration: none;
+}
+
+/*===============================navigation bar styles:===========================*/
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: sticky;
+  }
+  
+  .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+  }
+  
+  .navbar-links {
+    display: flex;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+  }
+  
+  .navbar-links a:hover {
+    color: #39b6ff;
+  }
+
+  .login button{
+    padding: 9px 25px;
+    background-color: #39b6ff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  .login button:hover{
+    background-color: #a0bddc;
+  }
+
+  .icon {
+    display: none;
+    color: #ffffff;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navbar-links { display: none; }
+    .navbar a.icon {
+      display: block;
+    }
+    .login { display: none; }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navbar.responsive .navbar-links {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .navbar.responsive .navbar-links a {
+      display: block;
+      padding: 20px 0;
+    }
+    .navbar.responsive .login {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+  }
+
+  /*=======================Main page music table===========*/
+
+  .music_table{
+    width: 50%;
+  }
+
+ /*=======================Main page - sell content===========*/
+ .sell_content{
+  margin-top: 500px;
+  font-family: "Montserrat", sans-serif;
+ }
+
+ .sell_content h3{
+  font-size: 30px;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+ }
+
+ .rectangle {
+  height: 5px;
+  width: 100px;
+  background-color: #0269d0;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*=======================Main page - Plans===============*/
+  
+* {
+  box-sizing: border-box;
+}
+
+.plans{
+  margin-top: 100px;
+}
+
+.plans h3{
+  font-family: "Montserrat";
+  font-size: 30px;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+/* Create three columns of equal width */
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+/* Style the list */
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* Add shadows on hover */
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+/* Pricing header */
+.price .header {
+  background-color: #1e5f85;
+  color: white;
+  font-size: 25px;
+}
+
+/* List items */
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Grey list item */
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+/* The "Sign Up" button */
+.signbutton {
+  background-color: #50c2e8;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.signbutton:hover{
+  color:#a0bddc;
+}
+
+/* Change the width of the three columns to 100%
+(to stack horizontally on small screens) */
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+
+/*=======================Main page - Contact===========*/
+.contact h3{
+  font-family: "Montserrat";
+  font-size: 30px;
+  margin: auto;
+  margin-top: 600px;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+ }
+
+ .contact_input{
+  font-family: "Montserrat";
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+ }
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+  /*=======================BMI calculator page===========*/
+
+  .Bmi {
+    font-family: "Montserrat";
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+.Bmi h1{
+  font-size: 50px;
+}
+.Bmi input[type="number"],
+.Bmi button {
+    margin-top: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+.Bmi button {
+
+    background-color: #39b6ff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.Bmi button:hover {
+    background-color: #a0bddc;
+}
+
+.bmi-height input {
+  font-family: "Montserrat";
+  color: black;
+}
+
+.bmi-weight input {
+  font-family: "Montserrat";
+  color: black;
+}
+
