@@ -161,7 +161,17 @@ body {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid black;
+    color: limegreen;
+    font-size: xx-large;
+    font-style: italic;
   }
+  .playlist_page_id{ // Fix the background image
+    background-image: url(website/Spotify_img_for_playlist_page.jpeg);
+    background-size: cover;
+    background-position: center;
+  }
+
 
  /*=======================Main page - sell content===========*/
  .sell_content{
