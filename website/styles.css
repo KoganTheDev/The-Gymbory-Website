@@ -166,8 +166,8 @@ body {
     font-size: xx-large;
     font-style: italic;
   }
-  .playlist_page_id{ // Fix the background image
-    background-image: url(website/Spotify_img_for_playlist_page.jpeg);
+  #playlist_page_id{ /*Fix the background image*/
+    background-image: url("Spotify_img_for_playlist_page.jpeg");
     background-size: cover;
     background-position: center;
   }
@@ -200,7 +200,15 @@ body {
   float: left;
   width: 33.33%;
 }
-
+#col1{
+  background-color:#288efa;
+}
+#col2{
+  background-color:#78b9fe;
+}
+#col3{
+  background-color:#b7d9fc;
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -321,7 +329,7 @@ body {
   .Bmi {
     font-family: "Montserrat";
     max-width: 400px;
-    margin: 50px auto;
+    margin: 0px auto;
     padding: 20px;
     border-radius: 5px;
 }
