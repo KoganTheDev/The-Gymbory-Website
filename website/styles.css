@@ -367,3 +367,15 @@ body {
   color: black;
 }
 
+
+/*=======================Login page===================*/
+.Login_info{
+  margin-top: 40%;
+  margin: 0px auto;
+  justify-content: center;
+  display: flex;
+  
+}
+.login_txt{
+  text-align: right;
+}
