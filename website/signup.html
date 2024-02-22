@@ -1,3 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Navigation Bar</title>
+<link rel="stylesheet" href="styles.css">
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+  <!--==============Nav bar====================-->
+  <div class="navbar">
+    <a href="main_page.html" class="logo">Gymbory</a>
+    <a href="javascript:void(0);" class="icon" onclick="phoneMenu()">
+      <i class="ri-menu-line"></i>
+    </a>
+    <div class="navbar-links">
+      <a href="main_page.html#plans">Plans</a>
+      <a href="#">Articles</a>
+      <a href="bmi_page.html">BMI</a>
+      <a href="main_page.html#contact">Contact</a>
+      <a href="playlists.html">Playlists</a>
+    </div>
+    <div class="login button">
+      <a class="cta" href="login.html"><button>Login</button></a>
+    </div>
+  </div>
+
 <div class="Login_info">
     <form id="verifyInput">
         <h2>Information Gathering</h2>
@@ -31,3 +61,6 @@
         <input type="reset" value="Reset">
         <br><br><br>
     </form>
+    <script src="script.js"></script>
+</body>
+</html>
