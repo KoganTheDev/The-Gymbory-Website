@@ -370,12 +370,37 @@ body {
 
 /*=======================Login page===================*/
 .Login_info{
-  margin-top: 40%;
+  font-family: "Montserrat", sans-serif;
   margin: 0px auto;
   justify-content: center;
   display: flex;
-  
+  padding: 100px;
 }
+
 .login_txt{
   text-align: right;
+}
+#login_button{
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#Forgot{
+  font-size: 10px;
+  color: #696a6a;
+  margin-left:35%;
+}
+
+.create_account{
+  font-family: "Montserrat", sans-serif;
+  margin: -100px auto;
+  justify-content: center;
+  display: flex;
+  position:sticky;
+}
+
+#signup_create{
+  margin-left: 1%;
+  margin-top: 2%;
+  padding: auto;
 }

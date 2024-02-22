@@ -10,33 +10,40 @@
     rel="stylesheet"/>
 </head>
 <body>
-<!--==============Nav bar====================-->
-<div class="navbar">
-  <a href="main_page.html" class="logo">Gymbory</a>
-  <a href="javascript:void(0);" class="icon" onclick="phoneMenu()">
-    <i class="ri-menu-line"></i>
-  </a>
-  <div class="navbar-links">
-    <a href="main_page.html#plans">Plans</a>
-    <a href="#">Articles</a>
-    <a href="bmi_page.html">BMI</a>
-    <a href="main_page.html#contact">Contact</a>
-    <a href="playlists.html">Playlists</a>
+  <!--==============Nav bar====================-->
+  <div class="navbar">
+    <a href="main_page.html" class="logo">Gymbory</a>
+    <a href="javascript:void(0);" class="icon" onclick="phoneMenu()">
+      <i class="ri-menu-line"></i>
+    </a>
+    <div class="navbar-links">
+      <a href="main_page.html#plans">Plans</a>
+      <a href="#">Articles</a>
+      <a href="bmi_page.html">BMI</a>
+      <a href="main_page.html#contact">Contact</a>
+      <a href="playlists.html">Playlists</a>
+    </div>
+    <div class="login button">
+      <a class="cta" href="SignUp.html"><button>Sign Up</button></a>
+    </div>
   </div>
-  <div class="login button">
-    <a class="cta" href="SignUp.html"><button>Sign Up</button></a>
+  <!--============Login/signup page===================-->
+  <div class="Login_info">
+    <form id="Login_input"> 
+        <h2>Login</h2>
+        <b class="login_txt">Email:</b><br>
+        <input type="text" id="firstName" name="firstName"><br><br>
+        <b class="login_txt">Password:</b><br>
+        <input type="password" value="FakePSW" id="myInput"><br><br> 
+        <input type="checkbox" onclick="myFunction()">Show Password</input><br></br>
+        <button id="login_button">login</button>
+        <br> <a id="Forgot" href="">Forgot password?</a></br>
+    </form><br></br>
   </div>
-</div>
-<!--============Login/signup page===================-->
-<script src="script.js"></script>
-<div class="Login_info">
-  <form id="Login_input">
-      <h2>Login</h2>
-      <b class="login_txt">Email:</b><br>
-      <input type="text" id="firstName" name="firstName"><br><br>
-      <b class="login_txt">Password:</b><br>
-      <input type="text" id="lastName" name="lastName"><br><br>   
-  </form>
-</div>
+  <div class="create_account">
+    <h4>Need an account?</h4>
+    <a id="signup_create" href="signup.html"><u>SIGN UP</u></a>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
