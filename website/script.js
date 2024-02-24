@@ -62,3 +62,25 @@ function verifyInput(){
       x.type = "password";
     }
   }
+
+  document.getElementBy("submit").onclick =function createUsr(){  
+    var account={
+      firstN:"",
+      lastN:"",
+      age:0,
+      height:0,
+      weight:0,
+      email:"",
+      pass:""
+    }
+    account.firstN=document.getElementBy("firstName").value
+    account.lastN=document.getElementBy("lastName").value
+    account.age=document.getElementBy("age").value
+    account.height=document.getElementBy("height").value
+    account.weight=document.getElementBy("weight").value
+    account.email=document.getElementBy("email").value
+    account.pass=document.getElementBy("pass").value
+    jsf = JSON.stringify(account);
+    fs = require('fs');
+    fs.writeFile("accounts.json", account);
+  }

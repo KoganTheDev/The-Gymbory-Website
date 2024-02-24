@@ -27,10 +27,10 @@
       <a class="cta" href="login.html"><button>Login</button></a>
     </div>
   </div>
-
+ <!--==============signup====================-->
 <div class="Login_info">
     <form id="verifyInput">
-        <h2>Information Gathering</h2>
+        <h2>Sign-Up</h2>
         <b>First Name:</b><br>
         <input type="text" id="firstName" name="firstName"><br><br>
         <b>Last Name:</b><br>
@@ -41,6 +41,10 @@
         <input type="number" id="height" name="height" min="0"><br><br>
         <b>Weight</b> (kg):<br>
         <input type="number" id="weight" name="weight" min="0"><br><br>
+        <b>Email:</b><br>
+        <input type="text" id="email" name="email"><br><br>
+        <b>Password:</b><br>
+        <input type="text" id="weight" name="pass"><br><br>
   
         <b>Sex:</b><br>
         <select id="sex" name="sex">
@@ -49,15 +53,7 @@
           <option value="other">Other</option>
         </select><br><br>
   
-        <b>Difficulty: </b><br>
-        <input type="radio" id="Easy" name="Difficulty" value="easy" checked="checked">Easy<br>
-        <input type="radio" id="Medium" name="Difficulty" value="Medium">Medium<br>
-        <input type="radio" id="Hard" name="Difficulty" value="Hard">Hard<br><br>
-  
-  
-        <b>Comments:</b> <br>
-        <textarea id="comments" name="comments" rows="10" cols="30"></textarea><br><br>
-        <button type="button" onclick="verifyInput()">submit</button>
+        <button type="button" id="submit">submit</button>
         <input type="reset" value="Reset">
         <br><br><br>
     </form>
