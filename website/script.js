@@ -63,7 +63,7 @@ function verifyInput(){
     }
   }
 
-  document.getElementBy("submit").onclick =function createUsr(){  
+  function createUsr(){  
     var account={
       firstN:"",
       lastN:"",
@@ -72,14 +72,14 @@ function verifyInput(){
       weight:0,
       email:"",
       pass:""
-    }
-    account.firstN=document.getElementBy("firstName").value
-    account.lastN=document.getElementBy("lastName").value
-    account.age=document.getElementBy("age").value
-    account.height=document.getElementBy("height").value
-    account.weight=document.getElementBy("weight").value
-    account.email=document.getElementBy("email").value
-    account.pass=document.getElementBy("pass").value
+    };
+    account.firstN=document.getElementBy("firstName").value;
+    account.lastN=document.getElementBy("lastName").value;
+    account.age=document.getElementBy("age").value;
+    account.height=document.getElementBy("height").value;
+    account.weight=document.getElementBy("weight").value;
+    account.email=document.getElementBy("email").value;
+    account.pass=document.getElementBy("pass").value;
     jsf = JSON.stringify(account);
     fs = require('fs');
     fs.writeFile("accounts.json", account);
