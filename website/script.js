@@ -43,6 +43,8 @@ function verifyInput(){
   var age = document.getElementBy("age").value;
   var height = document.getElementById("height").value;
   var weight = document.getElementById("weight").value;
+  var email = document.getElementById("Email").value;
+  var password = document.getElementById("password").value;
   var alertMsg = "";
   if(name != 5){
       alertMsg = alertMsg+"type 5";
@@ -63,6 +65,7 @@ function verifyInput(){
     }
   }
 
+<<<<<<< HEAD
   function createUsr(){  
     var account={
       firstN:"",
@@ -84,3 +87,5 @@ function verifyInput(){
     fs = require('fs');
     fs.writeFile("accounts.json", account);
   }
+=======
+>>>>>>> eceb9667f75ee115161437da277e6acefe93761b
