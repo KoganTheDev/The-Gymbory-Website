@@ -29,7 +29,7 @@
   </div>
 
 <div class="Login_info">
-    <form id="verifyInput">
+    <form id="UserInput">
         <h2>Information Gathering</h2>
         <b>First Name:</b><br>
         <input type="text" id="firstName" name="firstName"><br><br>
@@ -56,14 +56,15 @@
         <input type="radio" id="Easy" name="Difficulty" value="easy" checked="checked">Easy<br>
         <input type="radio" id="Medium" name="Difficulty" value="Medium">Medium<br>
         <input type="radio" id="Hard" name="Difficulty" value="Hard">Hard<br><br>
-  
-  
+        
+        
         <b>Comments:</b> <br>
         <textarea id="comments" name="comments" rows="10" cols="30"></textarea><br><br>
-        <button type="button" onclick="verifyInput()">submit</button>
-        <input type="reset" value="Reset">
+        <button type="button" onclick="UserInput()">submit</button>
+        <button type="button" onclick="reset()">reset</button>
         <br><br><br>
     </form>
     <script src="script.js"></script>
+    <script src="DB.js"></script>
 </body>
 </html>
