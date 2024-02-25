@@ -43,6 +43,8 @@ function verifyInput(){
   var age = document.getElementBy("age").value;
   var height = document.getElementById("height").value;
   var weight = document.getElementById("weight").value;
+  var email = document.getElementById("Email").value;
+  var password = document.getElementById("password").value;
   var alertMsg = "";
   if(name != 5){
       alertMsg = alertMsg+"type 5";
@@ -62,3 +64,4 @@ function verifyInput(){
       x.type = "password";
     }
   }
+
