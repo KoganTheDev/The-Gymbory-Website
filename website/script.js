@@ -30,7 +30,6 @@ function phoneMenu() {
     } else {
         bmiResult += "You are obese.";
     }
-
     document.getElementById('result').innerHTML = bmiResult;
 }
 
@@ -38,22 +37,16 @@ function phoneMenu() {
 
 /*===============================verify input in sign up===========================*/
 function verifyInput(){
-  var name = document.getElementBy("firstName").value;
-  var lastName = document.getElementBy("lastName").value;
+  var userName = document.getElementBy("userName").value;
   var age = document.getElementBy("age").value;
   var height = document.getElementById("height").value;
   var weight = document.getElementById("weight").value;
   var email = document.getElementById("Email").value;
   var password = document.getElementById("password").value;
-  var alertMsg = "";
-  if(name != 5){
-      alertMsg = alertMsg+"type 5";
+  processInfo(email,password, userName, age, height, weight);
+  alert("submitted");
   }
-  if(alertMsg != ""){
-      alert(alertMsg);
-  }
-  }
-
+ 
 
 
   function showPass() {
