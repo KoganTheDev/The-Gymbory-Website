@@ -3,7 +3,7 @@
 
 function processInfo(email,password, name, lastName, age, height, weight) {
 	var dbString = stringify(email, password,name, lastName, age, height, weight);
-	localStorage.setItem(email, password, dbString);
+	localStorage.setItem(email, dbString);
 }
 
 function stringify(email,password, name, lastName, age, height, weight) {
