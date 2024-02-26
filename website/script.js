@@ -61,3 +61,14 @@ function showPass() {
     x.type = "password";
   }
 }
+
+/*===============================save input of login===========================*/
+function SaveLoginInput(){
+  var email = document.getElementById("Email").value;
+  var password = document.getElementById("password").value;
+}
+
+/*===============================check if a user is exist in the local storage===========================*/
+function checkExistence(){
+    
+}
