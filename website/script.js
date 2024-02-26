@@ -48,12 +48,24 @@ alert("submitted");
 location.reload();
 }
 
-  function showPass() {
-    var x = document.getElementById("myInput");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
-  }
 
+
+function showPass() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+/*===============================save input of login===========================*/
+function SaveLoginInput(){
+  var email = document.getElementById("Email").value;
+  var password = document.getElementById("password").value;
+}
+
+/*===============================check if a user is exist in the local storage===========================*/
+function checkExistence(){
+    
+}
