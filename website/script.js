@@ -63,16 +63,19 @@ function showPass() {
 
 /*===============================save input of login===========================*/
 function SaveLoginInput(){
-  var email = document.getElementById("Email").value;
-  var password = document.getElementById("password").value;
+  var login_email = document.getElementById("Email").value;
+  var login_password = document.getElementById("password").value;
 }
 
 /*===============================check if a user is exist in the local storage===========================*/
 function checkExistence(){
-  if (CheckUsersInfoDB()) {
-    alert("You logged in successfully");
+  var usersTable = CheckUsersInfoDB();
+  for (i=0; i<usersTable.length; i++) {
+    if (usersTable[i].email != login_email || usersTable[i].password != login_password) {
+      alert("Wrong email or password! please try again.")
+      location.reload();
+    } 
   }
-  else{
-    alert("Your email or password are incorrect, please fill again");
-  }
+  alert("You logged in successfully");
+  location.reload();
 }

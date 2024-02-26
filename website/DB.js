@@ -18,19 +18,24 @@ function stringify(email,password, userName, age, height, weight) {
 }
 
 function CheckUsersInfoDB(){
-var users = [];	//rows: number of users. cols: number of info params
+	var users = [];	//rows: number of student. cols: number of info params
 	for (i = 0; i < localStorage.length; i++) {
-		var studentId = localStorage.key(i);
-		var studentInfo = localStorage.getItem(studentId);
-		var tmpStudent = [];
-		tmpStudent[0] = studentId;
-		tmpStudent[1] = getName(studentInfo);
-		tmpStudent[2] = getLastName(studentInfo);
-		tmpStudent[3] = getAddr(studentInfo);
-		tmpStudent[4] = getLang(studentInfo);
-		tmpStudent[5] = getKnowlage(studentInfo);
-		students[i] = tmpStudent;
+		var userName = localStorage.key(i);
+		var userInfo = localStorage.getItem(userName);
+		var tempuser = [];
+		tempUser[0] = getEmail(userInfo);
+		tempUser[1] = getName(userInfo);
+		users[i] = tempUser;
 	}
-	return students;
+	
+	return users;
+}
+
+
+function getEmail(userInfo){
+
+}
+
+function getName(userInfo){
 
 }
