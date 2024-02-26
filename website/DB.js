@@ -23,8 +23,9 @@ function CheckUsersInfoDB(){
 		var userName = localStorage.key(i);
 		var userInfo = localStorage.getItem(userName);
 		var tempuser = [];
-		tempUser[0] = getEmail(userInfo);
-		tempUser[1] = getPassword(userInfo);
+		tempuser[0] = userName;
+		tempUser[1] = getEmail(userInfo);
+		tempUser[2] = getPassword(userInfo);
 		users[i] = tempUser;
 	}
 	return users;

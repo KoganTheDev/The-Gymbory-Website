@@ -61,18 +61,15 @@ function showPass() {
   }
 }
 
-/*===============================save input of login===========================*/
-function SaveLoginInput(){
-  var login_email = document.getElementById("Email").value;
-  var login_password = document.getElementById("password").value;
-}
-
 /*===============================check if a user is exist in the local storage===========================*/
 function checkExistence(){
+  var login_userName = document.getElementById("userName").value;
+  var login_email = document.getElementById("Email").value;
+  var login_password = document.getElementById("myInput").value;
   var usersTable = CheckUsersInfoDB();
   for (i=0; i<usersTable.length; i++) {
-    if (usersTable[i].email !== login_email || usersTable[i].password !== login_password) {
-      alert("Wrong email or password! please try again.")
+    if (usersTable[i][0] !== login_userName || usersTable[i][1] !== login_email || usersTable[i][2] !== login_password) {
+      alert("Wrong user name, email or password! please try again.")
       location.reload();
     } 
   }
