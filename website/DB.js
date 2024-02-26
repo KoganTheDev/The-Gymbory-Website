@@ -24,18 +24,21 @@ function CheckUsersInfoDB(){
 		var userInfo = localStorage.getItem(userName);
 		var tempuser = [];
 		tempUser[0] = getEmail(userInfo);
-		tempUser[1] = getName(userInfo);
+		tempUser[1] = getPassword(userInfo);
 		users[i] = tempUser;
 	}
-	
 	return users;
 }
 
 
 function getEmail(userInfo){
-
+	var emailIndex = userInfo.indexOf('name')+7;
+	var endEmailIndex = userInfo.indexOf('lastName')-1;
+	return 	userInfo.substring(emailIndex, endEmailIndex);
 }
 
-function getName(userInfo){
-
+function getPassword(userInfo){
+	var PassIndex = userInfo.indexOf('password')+10;
+	var endPassIndex = userInfo.indexOf('password')-1;
+	return 	userInfo.substring(PassIndex, endPassIndex);
 }
