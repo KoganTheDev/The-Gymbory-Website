@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 
 
@@ -107,6 +104,8 @@ body {
   height: auto;
 }
 .about_section {
+  font-size: 1em;
+  width: 100%;
   position: relative;
   display: inline-block;
 }
@@ -143,6 +142,8 @@ body {
   background-color: #000000;
 }
 .divOfText{
+  font-size: 1em;
+  width: 100%;
   background-color: black;
   margin-top: 0%;
   text-align: center;
