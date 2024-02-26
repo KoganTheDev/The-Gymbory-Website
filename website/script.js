@@ -71,7 +71,7 @@ function SaveLoginInput(){
 function checkExistence(){
   var usersTable = CheckUsersInfoDB();
   for (i=0; i<usersTable.length; i++) {
-    if (usersTable[i].email != login_email || usersTable[i].password != login_password) {
+    if (usersTable[i].email !== login_email || usersTable[i].password !== login_password) {
       alert("Wrong email or password! please try again.")
       location.reload();
     } 
