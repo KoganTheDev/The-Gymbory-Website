@@ -8,8 +8,7 @@
 <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
     rel="stylesheet"/>
-    <script src="script.js"></script>
-    <script src="DB.js"></script>
+    
 </head>
 <body>
   <!--==============Nav bar====================-->
@@ -34,7 +33,7 @@
     <form id="UserInput">
         <h2>Information Gathering</h2>
         <b>User Name:</b><br>
-        <input type="text" id="User Name" name="userName"><br><br>
+        <input type="text" id="userName" name="userName"><br><br>
         <b>Age:</b><br>
         <input type="number" id="age" name="age" min="0"><br><br>
         <b>Height</b> (cm):<br>
@@ -44,7 +43,7 @@
         <b>Email</b><br>
         <input type="text" id="Email" name="Email"><br><br>
         <b>Password</b><br>
-        <input type="text" id="Password" name="Password"><br><br>
+        <input type="text" id="password" name="Password"><br><br>
         <b>Sex:</b><br>
         <select id="sex" name="sex">
           <option value="male">Male</option>
@@ -64,6 +63,7 @@
         <button type="button" onclick="reset()">reset</button>
         <br><br><br>
     </form>
-    
+    <script src="script.js"></script>
+    <script src="DB.js"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@ function stringify(email,password, userName, age, height, weight) {
 	var ageStr = 'age: ' + age;
 	var heightStr = 'height: ' + height;
 	var weightStr = 'weight: ' + weight;
-	var dbStr = '{' + emailStr + ',' + passwordStr + ',' + nameStr + ',' + lastNameStr + ',' + ageStr + ',' + heightStr + ',' + weightStr + '}';
+	var dbStr = '{' + emailStr + ',' + passwordStr + ',' + nameStr + ',' + ageStr + ',' + heightStr + ',' + weightStr + '}';
 	return dbStr;	
 }
 
