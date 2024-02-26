@@ -48,9 +48,6 @@ alert("submitted");
 location.reload();
 }
 
-
-
-
   function showPass() {
     var x = document.getElementById("myInput");
     if (x.type === "password") {
@@ -60,35 +57,3 @@ location.reload();
     }
   }
 
-<<<<<<< HEAD
-  function createUsr(){  
-    var account={
-      firstN:"",
-      lastN:"",
-      age:0,
-      height:0,
-      weight:0,
-      email:"",
-      pass:""
-    };
-    account.firstN=document.getElementBy("firstName").value;
-    account.lastN=document.getElementBy("lastName").value;
-    account.age=document.getElementBy("age").value;
-    account.height=document.getElementBy("height").value;
-    account.weight=document.getElementBy("weight").value;
-    account.email=document.getElementBy("email").value;
-    account.pass=document.getElementBy("pass").value;
-    jsf = JSON.stringify(account);
-    fs = require('fs');
-    fs.writeFile("accounts.json", account);
-  }
-=======
->>>>>>> eceb9667f75ee115161437da277e6acefe93761b
-function showPass() {
-  var x = document.getElementById("myInput");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
