@@ -1,3 +1,5 @@
+// Business Logic Tier - logic related to the presentation tier
+
 function phoneMenu() {
   var x = document.querySelector(".navbar");
   if (x.className === "navbar") {
@@ -70,5 +72,10 @@ function SaveLoginInput(){
 
 /*===============================check if a user is exist in the local storage===========================*/
 function checkExistence(){
-    
+  if (CheckUsersInfoDB()) {
+    alert("You logged in successfully");
+  }
+  else{
+    alert("Your email or password are incorrect, please fill again");
+  }
 }
