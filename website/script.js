@@ -63,17 +63,22 @@ function showPass() {
 
 /*===============================check if a user is exist in the local storage===========================*/
 function checkExistence(){
+  var flag = false;
   var login_userName = document.getElementById("userName").value;
   var login_email = document.getElementById("Email").value;
   var login_password = document.getElementById("myInput").value;
   var usersTable = CheckUsersInfoDB();
   for (i=0; i<usersTable.length; i++) {
     var user = usersTable[i];
-    if (user[0] !== login_userName || user[1] !== login_email || user[2] !== login_password) {
-      alert("Wrong user name, email or password! please try again.")
-      location.reload();
+    if (user[0] === login_userName && user[1] === login_email && user[2] === login_password) {
+      flag = true;
     } 
   }
-  alert("You logged in successfully");
+  if (flag == true) {
+    alert("You logged in successfully");
+  }
+  else{
+    alert("Wrong user name, email or password! please try again.")
+  }
   location.reload();
 }
