@@ -13,7 +13,7 @@ body {
   li,a,button{
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: 1em;
+    font-size: 100%;
     width: 100%;
     color: #164863;
     text-decoration: none;
