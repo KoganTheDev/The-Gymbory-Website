@@ -18,7 +18,7 @@ function stringify(email,password, userName, age, height, weight) {
 }
 
 function CheckUsersInfoDB(){
-	var users = [];	//rows: number of student. cols: number of info params
+	var users = [];	//rows: number of users. cols: number of info params
 	for (i = 0; i < localStorage.length; i++) {
 		var userName = localStorage.key(i);
 		var userInfo = localStorage.getItem(userName);
