@@ -33,8 +33,8 @@ function CheckUsersInfoDB(){
 
 
 function getEmail(userInfo){
-	var emailIndex = userInfo.indexOf('name')+7;
-	var endEmailIndex = userInfo.indexOf('lastName')-1;
+	var emailIndex = userInfo.indexOf('Email')+7;
+	var endEmailIndex = userInfo.indexOf('Email')-1;
 	return 	userInfo.substring(emailIndex, endEmailIndex);
 }
 
