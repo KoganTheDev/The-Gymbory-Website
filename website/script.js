@@ -51,6 +51,8 @@ location.reload();
 
 
 
+
+
 function showPass() {
   var x = document.getElementById("myInput");
   if (x.type === "password") {
@@ -58,4 +60,15 @@ function showPass() {
   } else {
     x.type = "password";
   }
+}
+
+/*===============================save input in login botton===========================*/
+function SaveLoginInput(){
+  var email = document.getElementById("Email").value;
+  var password = document.getElementById("password").value;
+}
+
+/*===============================check if the login input is valid===========================*/
+function CheckExistence(){
+
 }
