@@ -70,7 +70,7 @@ function checkExistence(){
   var usersTable = CheckUsersInfoDB();
   for (i=0; i<usersTable.length; i++) {
     var user = usersTable[i];
-    if (user[0] === login_userName && user[1] === login_email && user[2] === login_password) {
+    if (usersTable[i][0] === login_userName && usersTable[i][1] === login_email && usersTable[i][2] === login_password) {
       flag = true;
     } 
   }
