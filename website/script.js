@@ -39,13 +39,15 @@ function calculateBMI() {
 
 /*===============================verify input in sign up===========================*/
 function verifyInput(){
-var userName = document.getElementById("userName").value;
+var firstName = document.getElementById("firstName").value;
+var lastName = document.getElementById("lastName").value;
 var age = document.getElementById("age").value;
 var height = document.getElementById("height").value;
 var weight = document.getElementById("weight").value;
 var email = document.getElementById("Email").value;
 var password = document.getElementById("password").value;
-processInfo(email,password, userName, age, height, weight);
+var gen = document.getElementById("gender").value;
+processInfo(email,password, firstName, lastName, age, gen, height, weight);
 alert("submitted");
 location.reload();
 }
@@ -63,9 +65,9 @@ function showPass() {
 
 /*===============================check if a user is exist in the local storage===========================*/
 function checkExistence(){
-  var login_userName = document.getElementById("userName").value;
+  var login_mail = document.getElementById("Email").value;
   var login_password = document.getElementById("myInput").value;
-  var flag = CheckUsersInfoDB(login_userName,login_password);
+  var flag = CheckUsersInfoDB(login_mail,login_password);
   if (flag == true) {
     alert("You logged in successfully");
   }
