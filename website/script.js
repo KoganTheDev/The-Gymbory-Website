@@ -15,7 +15,7 @@ function calculateBMI() {
   var height = parseFloat(document.getElementById('height').value);
   var weight = parseFloat(document.getElementById('weight').value);
 
-  if (isNaN(height) || isNaN(weight) || height <= 0 || height >=230  || weight <= 0 || weight>=500 ) {
+  if (isNaN(height) || isNaN(weight) || height <= 65 || height >=230  || weight <= 0 || weight>=500 ) {
       document.getElementById('result').innerHTML = "Please enter valid height and weight.";
       return;
   }
@@ -76,24 +76,3 @@ function checkExistence(){
   }
   location.reload();
 }
-
-/*function checkExistence(){
-  var flag = false;
-  var login_userName = document.getElementById("userName").value;
-  var login_email = document.getElementById("Email").value;
-  var login_password = document.getElementById("myInput").value;
-  var usersTable = CheckUsersInfoDB();
-  for (i=0; i<usersTable.length; i++) {
-    var user = usersTable[i];
-    if (usersTable[i][0] === login_userName && usersTable[i][1] === login_email && usersTable[i][2] === login_password) {
-      flag = true;
-    } 
-  }
-  if (flag == true) {
-    alert("You logged in successfully");
-  }
-  else{
-    alert("Wrong user name, email or password! please try again.")
-  }
-  location.reload();
-}*/

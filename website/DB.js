@@ -19,19 +19,6 @@ function stringify(email,password, firstName, lastName, age, gen, height, weight
 	return dbStr;	
 }
 
-/*function CheckUsersInfoDB(){
-	var users = [];	//rows: number of users. cols: number of info params
-	for (i = 0; i < localStorage.length; i++) {
-		var userName = localStorage.key(i);
-		var userInfo = localStorage.getItem(userName);
-		var tempuser = [];
-		tempuser[0] = userName;
-		tempuser[1] = getEmail(userInfo);
-		tempuser[2] = getPassword(userInfo);
-		users[i] = tempuser;
-	}
-	return users;
-}*/
 
 function CheckUsersInfoDB(usrn,pass){	//rows: number of users. cols: number of info params
 	for (i = 0; i < localStorage.length; i++) {
