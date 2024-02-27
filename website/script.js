@@ -62,6 +62,19 @@ function showPass() {
 }
 
 /*===============================check if a user is exist in the local storage===========================*/
+/*function checkExistence(){
+  var login_userName = document.getElementById("userName").value;
+  var login_password = document.getElementById("myInput").value;
+  var flag = CheckUsersInfoDB(login_userName,login_password);
+  if (flag == true) {
+    alert("You logged in successfully");
+  }
+  else{
+    alert("Wrong user name, email or password! please try again.")
+  }
+  location.reload();
+}*/
+
 function checkExistence(){
   var flag = false;
   var login_userName = document.getElementById("userName").value;

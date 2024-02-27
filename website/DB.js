@@ -31,6 +31,21 @@ function CheckUsersInfoDB(){
 	return users;
 }
 
+/*function CheckUsersInfoDB(usrn,pass){	//rows: number of users. cols: number of info params
+	for (i = 0; i < localStorage.length; i++) {
+		var userName = localStorage.key(i);
+		if (userName===usrn){
+			var userInfo=localStorage.getItem(userName);
+			var passIndex=userName.indexOf(userInfo);
+			var p= userName
+			if (p===pass){
+				return true;
+			}
+		}
+	}
+	return false;
+}*/
+
 
 function getEmail(userInfo){
 	var emailIndex = userInfo.indexOf('Email')+7;
