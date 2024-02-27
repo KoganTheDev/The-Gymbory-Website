@@ -6,10 +6,10 @@ function processInfo(email,password, userName, age, height, weight) {
 	localStorage.setItem(userName, dbString);
 }
 
-function stringify(email,password, userName, age, height, weight) {
+function stringify(email,password, name, age, height, weight) {
     var emailStr = 'email: ' + email;
     var passwordStr = 'password: ' + password; 
-	var nameStr = 'name: ' + userName;
+	var nameStr = 'name: ' + name;
 	var ageStr = 'age: ' + age;
 	var heightStr = 'height: ' + height;
 	var weightStr = 'weight: ' + weight;
@@ -17,7 +17,7 @@ function stringify(email,password, userName, age, height, weight) {
 	return dbStr;	
 }
 
-function CheckUsersInfoDB(){
+/*function CheckUsersInfoDB(){
 	var users = [];	//rows: number of users. cols: number of info params
 	for (i = 0; i < localStorage.length; i++) {
 		var userName = localStorage.key(i);
@@ -29,22 +29,21 @@ function CheckUsersInfoDB(){
 		users[i] = tempuser;
 	}
 	return users;
-}
+}*/
 
-/*function CheckUsersInfoDB(usrn,pass){	//rows: number of users. cols: number of info params
+function CheckUsersInfoDB(usrn,pass){	//rows: number of users. cols: number of info params
 	for (i = 0; i < localStorage.length; i++) {
-		var userName = localStorage.key(i);
-		if (userName===usrn){
-			var userInfo=localStorage.getItem(userName);
-			var passIndex=userName.indexOf(userInfo);
-			var p= userName
-			if (p===pass){
+		var userId = localStorage.key(i);
+		if (userId.localeCompare(usrn)){
+			var userInfo=localStorage.getItem(userId);
+			var p=getPassword(userInfo);
+			if (p.localeCompare(pass)){
 				return true;
 			}
 		}
 	}
 	return false;
-}*/
+}
 
 
 function getEmail(userInfo){

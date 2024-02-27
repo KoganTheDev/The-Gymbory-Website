@@ -62,7 +62,7 @@ function showPass() {
 }
 
 /*===============================check if a user is exist in the local storage===========================*/
-/*function checkExistence(){
+function checkExistence(){
   var login_userName = document.getElementById("userName").value;
   var login_password = document.getElementById("myInput").value;
   var flag = CheckUsersInfoDB(login_userName,login_password);
@@ -73,9 +73,9 @@ function showPass() {
     alert("Wrong user name, email or password! please try again.")
   }
   location.reload();
-}*/
+}
 
-function checkExistence(){
+/*function checkExistence(){
   var flag = false;
   var login_userName = document.getElementById("userName").value;
   var login_email = document.getElementById("Email").value;
@@ -94,4 +94,4 @@ function checkExistence(){
     alert("Wrong user name, email or password! please try again.")
   }
   location.reload();
-}
+}*/
