@@ -99,17 +99,48 @@ function showPass() {
   }
 }
 
+
 /*===============================check if a user is exist in the local storage===========================*/
+
 function checkExistence(){
   var login_mail = document.getElementById("Email").value;
   var login_password = document.getElementById("myInput").value;
-  var flag = CheckUsersInfoDB(login_mail,login_password);
-  if (flag == true) {
-    alert("You logged in successfully");
+  var userData = CheckUsersInfoDB(login_mail);
+  if ((userData.length > 0) && (userData[1].localeCompare(login_password) === 0)) {
+    //alert("You logged in successfully");
+    
+    location.href = 'main_page.html';
   }
   else{
-    alert("Wrong user name, email or password! please try again.")
+    alert("Wrong user name, email or password! please try again.");
   }
-  location.reload();
 }
 
+
+
+function updateLoginButton() {
+  var loginButton = document.querySelector('.loginbtn button');
+  var userButton = document.querySelector('.My_account button');
+
+  // Check if the elements are found before trying to set their properties
+  if (loginButton && userButton) {
+    if (flag) {
+        // User is logged in, hide login button and show user button
+        loginButton.style.display = 'none';
+        loginButton.style.position= 'absolute';
+        userButton.style.display = 'inline-block';
+        userButton.style.position = 'relative';
+        // You can also add additional logic here to display user-specific content or options
+    } 
+    else {
+        // User is not logged in, show login button and hide user button
+        userButton.style.display = 'none';
+        userButton.style.position= 'absolute';
+        loginButton.style.display = 'inline-block';
+        loginButton.style.position = 'relative';
+    }
+  } else {
+    console.error("Login button or user button not found");
+  }
+}
+updateLoginButton();
