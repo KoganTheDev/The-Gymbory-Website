@@ -6,7 +6,7 @@ function processInfo(email,password, firstName, lastName, age, gen, height, weig
 	localStorage.setItem(email, dbString);
 }
 
-function stringify(email,password, firstName, lastName, age, gen, height, weight,stat) {
+function stringify(email,password, firstName, lastName, age, gen, height, weight) {
     var emailStr = 'email: ' + email;
     var passwordStr = 'password: ' + password; 
 	var fnameStr = 'fname: ' + firstName;
@@ -15,9 +15,23 @@ function stringify(email,password, firstName, lastName, age, gen, height, weight
 	var heightStr = 'height: ' + height;
 	var weightStr = 'weight: ' + weight;
 	var genderStr = 'gender: ' + gen;
-	var logstatStr= 'loggedin: ' + stat;
-	var dbStr = '{' + emailStr + ',' + passwordStr + ',' + fnameStr + ',' + lnameStr + ',' + ageStr + ',' + heightStr + ',' + weightStr + ',' + genderStr + ',' + logstatStr + '}';
+	var statStr= 'loggedin: 0'
+	var dbStr = '{' + emailStr + ',' + passwordStr + ',' + fnameStr + ',' + lnameStr + ',' + ageStr + ',' + heightStr + ',' + weightStr + ',' + genderStr + ','+ statStr + '}';
 	return dbStr;	
+}
+
+function stringify_Change(email,password, firstName, lastName, age, gen, height, weight) {
+    var emailStr = 'email: ' + email;
+    var passwordStr = 'password: ' + password; 
+	var fnameStr = 'fname: ' + firstName;
+	var lnameStr = 'lname: ' + lastName;
+	var ageStr = 'age: ' + age;
+	var heightStr = 'height: ' + height;
+	var weightStr = 'weight: ' + weight;
+	var genderStr = 'gender: ' + gen;
+	var statStr= 'loggedin: 1';
+	var dbStrc= '{' + emailStr + ',' + passwordStr + ',' + fnameStr + ',' + lnameStr + ',' + ageStr + ',' + heightStr + ',' + weightStr + ',' + genderStr + ','+ statStr + '}';
+	return dbStrc;	
 }
 
 function CheckUsersInfoDB(usrn){
@@ -41,9 +55,23 @@ function CheckUsersInfoDB(usrn){
 }
 
 
-function changeStat(usrn){//to change string inside local storage.
-	
+function ChangeStat(usrn){//to change string inside local storage.
+	var userData=CheckUsersInfoDB(usrn);
+	var new_info=stringify_Change(usrn,userData[1],userData[2],userData[3],userData[4],userData[5],userData[6],userData[7]);
+	localStorage.setItem(usrn,new_info);
 }
+
+function checkStat(usrn){
+	if (usrn != null){
+	  var userInfo=localStorage.getItem(usrn);
+	  var stat=getStat(userInfo);
+	  if (stat==true){
+		return true;
+	  }
+	}
+	return false;
+  }
+
 
 function getPassword(userInfo){
 	var PassIndex = userInfo.indexOf('password')+10;
