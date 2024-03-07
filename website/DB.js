@@ -62,14 +62,14 @@ function ChangeStat(usrn){//to change string inside local storage.
 }
 
 function checkStat(usrn){
-	if (usrn != null){
+	if (usrn != ""){
 	  var userInfo=localStorage.getItem(usrn);
 	  var stat=getStat(userInfo);
-	  if (stat==true){
-		return true;
+	  if (stat==1){
+		return 1;
 	  }
 	}
-	return false;
+	return 0;
   }
 
 
