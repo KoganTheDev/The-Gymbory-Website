@@ -16,6 +16,17 @@ function phoneMenu() {
 }
 
 
+function showTab(tabName) {
+  var tabs = document.querySelectorAll('.tab');
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove('active');
+  }
+  
+  var selectedTab = document.getElementById(tabName);
+  selectedTab.classList.add('active');
+}
+
+
 /*===============================BMI claculator===========================*/
 function calculateBMI() {
   var height = parseFloat(document.getElementById('height').value);
