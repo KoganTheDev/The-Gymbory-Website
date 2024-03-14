@@ -76,10 +76,10 @@ li,a,button{
 }
 
 /* Hover styles for both buttons */
-.loginbtn button:hover,
+/*.loginbtn button:hover,
 .My_account button:hover {
     background-color: #b7d2ef;
-}
+}*/
 
 .icon {
     display: none;

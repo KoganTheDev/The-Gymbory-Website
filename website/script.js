@@ -1,10 +1,4 @@
 // Business Logic Tier - logic related to the presentation tier
-var loggedin_user="";
-
-document.addEventListener('DOMContentLoaded', function() {
-  updateLoginButton(loggedin_user);
-});
-
 
 function phoneMenu() {
   var x = document.querySelector(".navbar");
@@ -126,8 +120,9 @@ function checkExistence(){
   if ((userData.length > 0) && (userData[1].localeCompare(login_password) === 0)) {
     //alert("You logged in successfully");
     ChangeStat(login_mail);
-    loggedin_user = login_mail;
     alert("Login succesfuly");
+    window.location.href = "user_page.html";
+    updateLoginButton(login_mail);
   }
   else{
     alert("Wrong user name, email or password! please try again.");
@@ -140,9 +135,7 @@ function updateLoginButton(usrn) {
   var flag=checkStat(usrn);
 
   // Check if the elements are found before trying to set their properties
-  if (loginButton && userButton) {
-    var flag=checkStat(usrn);
-    if (flag) {
+  if (flag) {
         // User is logged in, hide login button and show user button
         loginButton.style.display = 'none';
         loginButton.style.position= 'absolute';
@@ -157,7 +150,4 @@ function updateLoginButton(usrn) {
         loginButton.style.display = 'inline-block';
         loginButton.style.position = 'relative';
     }
-  } else {
-    console.error("Login button or user button not found");
-  }
 }
