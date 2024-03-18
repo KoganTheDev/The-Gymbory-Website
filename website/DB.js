@@ -54,13 +54,33 @@ function CheckUsersInfoDB(usrn){
 	return userData;
 }
 
+//Function that checks who is the user that loggedin:
+function CheckUserConnect(){
+	for (i = 0; i < localStorage.length; i++) {
+		var userId = localStorage.key(i);
+		var userInfo=localStorage.getItem(userId);
+		var flag=getStat(userInfo);
+		if (flag){
+			return userId;
+		}
+	}
+	return "";
+}
 
-function ChangeStat(usrn){//to change string inside local storage.
+//Function that change the loggin stat:
+function ChangeStat(usrn,flag){//to change string inside local storage.
 	var userData=CheckUsersInfoDB(usrn);
-	var new_info=stringify_Change(usrn,userData[1],userData[2],userData[3],userData[4],userData[5],userData[6],userData[7]);
+	if (flag){
+		var new_info=stringify_Change(usrn,userData[1],userData[2],userData[3],userData[4],userData[5],userData[6],userData[7]);
+	}
+	else{
+		var new_info=stringify(usrn,userData[1],userData[2],userData[3],userData[4],userData[5],userData[6],userData[7]);
+	}
 	localStorage.setItem(usrn,new_info);
 }
 
+
+//Function that checks specific user loggedin stat:
 function checkStat(usrn){
 	if (usrn != ""){
 	  var userInfo=localStorage.getItem(usrn);
@@ -72,7 +92,7 @@ function checkStat(usrn){
 	return 0;
   }
 
-
+//=============================functions that return substrings============================================//
 function getPassword(userInfo){
 	var PassIndex = userInfo.indexOf('password')+10;
 	var endPassIndex = userInfo.indexOf('fname')-1;
@@ -116,6 +136,6 @@ function getGender(userInfo){
 }
 function getStat(userInfo){
 	var PassIndex = userInfo.indexOf('loggedin')+10;
-	var endPassIndex = userInfo.indexOf('}')-1;
+	var endPassIndex = userInfo.indexOf('}');
 	return 	userInfo.substring(PassIndex, endPassIndex);
 }

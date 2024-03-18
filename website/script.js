@@ -1,4 +1,39 @@
+document.addEventListener('DOMContentLoaded', onPageLoad);
+
+
 // Business Logic Tier - logic related to the presentation tier
+function onPageLoad() {
+  var account_name =  CheckUserConnect(); // Retrieve account name from localStorage
+  // Check if account name exists
+  if (account_name) {
+    updateLoginButton(account_name); // Call the function to update login button based on account status
+    // Add other code here to update elements specific to the user being logged in
+  }
+}
+
+function updateLoginButton(usrn) {
+  var loginButton = document.querySelector('.loginbtn button');
+  var userButton = document.querySelector('.My_account button');
+  var flag=checkStat(usrn);
+
+  // Check if the elements are found before trying to set their properties
+  if (flag) {
+        // User is logged in, hide login button and show user button
+        loginButton.style.display = 'none';
+        loginButton.style.position= 'absolute';
+        userButton.style.display = 'inline-block';
+        userButton.style.position = 'relative';
+        // You can also add additional logic here to display user-specific content or options
+    } 
+    else {
+        // User is not logged in, show login button and hide user button
+        userButton.style.display = 'none';
+        userButton.style.position= 'absolute';
+        loginButton.style.display = 'inline-block';
+        loginButton.style.position = 'relative';
+    }
+}
+
 
 function phoneMenu() {
   var x = document.querySelector(".navbar");
@@ -20,6 +55,15 @@ function showTab(tabName) {
   selectedTab.classList.add('active');
 }
 
+
+function showPass() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
 
 /*===============================BMI claculator===========================*/
 function calculateBMI() {
@@ -47,9 +91,8 @@ function calculateBMI() {
 }
 
 
-
-/*===============================verify input in sign up===========================*/
-function verifyInput(){
+/*===============================sign up functions===========================*/
+function signUp_user(){
   var firstName = document.getElementById("firstName").value;
   var lastName = document.getElementById("lastName").value;
   var age = document.getElementById("age").value;
@@ -92,7 +135,6 @@ function verifyInput(){
   }
 }
 
-
 function isValidName(name) {
   return /^[a-zA-Z]+$/.test(name) && name.trim() !== "";
 } // this function checks if name contains digits or symbols (not a-z)
@@ -101,53 +143,31 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 } // this function checks if the email complies to the standard form of an email address.
 
-function showPass() {
-  var x = document.getElementById("myInput");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
 
+/*===============================login and logout functions===========================*/
 
-/*===============================check if a user is exist in the local storage===========================*/
-
-function checkExistence(){
+function connect_Func(){
   var login_mail = document.getElementById("Email").value;
   var login_password = document.getElementById("myInput").value;
   var userData = CheckUsersInfoDB(login_mail);
   if ((userData.length > 0) && (userData[1].localeCompare(login_password) === 0)) {
     //alert("You logged in successfully");
-    ChangeStat(login_mail);
-    alert("Login succesfuly");
+    ChangeStat(login_mail,true);
+    alert("Login succesfuly"); 
+    account_name=login_mail;
     window.location.href = "user_page.html";
-    updateLoginButton(login_mail);
   }
   else{
     alert("Wrong user name, email or password! please try again.");
   }
+  return "";
 }
 
-function updateLoginButton(usrn) {
-  var loginButton = document.querySelector('.loginbtn button');
-  var userButton = document.querySelector('.My_account button');
-  var flag=checkStat(usrn);
-
-  // Check if the elements are found before trying to set their properties
-  if (flag) {
-        // User is logged in, hide login button and show user button
-        loginButton.style.display = 'none';
-        loginButton.style.position= 'absolute';
-        userButton.style.display = 'inline-block';
-        userButton.style.position = 'relative';
-        // You can also add additional logic here to display user-specific content or options
-    } 
-    else {
-        // User is not logged in, show login button and hide user button
-        userButton.style.display = 'none';
-        userButton.style.position= 'absolute';
-        loginButton.style.display = 'inline-block';
-        loginButton.style.position = 'relative';
-    }
+function LogOutUser(){
+  debugger;
+  var account_name=CheckUserConnect();
+  ChangeStat(account_name,false);
+  alert("Logged out successfully!");
+  window.location.href = "main_page.html";
 }
+
