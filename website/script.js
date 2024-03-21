@@ -118,30 +118,34 @@ function signUp_user(){
   
   if (!isValidName(firstName)) {
     alert("Invalid First name. Please try again");
+    return;
   }
 
   if (!isValidName(lastName)) {
     alert("Invalid Last name. Please try again");
+    return;
   }
 
   // Fix the age validation condition
   if (isNaN(age) || age < 1 || age > 100) {
     alert("Age must be between 1 and 100. Please try again");
+    return;
   }
 
   if (isNaN(height) || height < 60 || height > 230) {
     alert("Height should be between 60 and 230.");
+    return;
   }
 
   if (isNaN(weight) || weight > 500 || weight < 10) {
     alert("Weight should be between 10 and 500.");
+    return;
   }
 
   if (!isValidEmail(email)) {
     alert("Invalid Email address. Please try again.");
+    return;
   }
-  else
-  {
     //singelton - check if a new user signup Email is already taken
     var userData = ""
     userData = CheckUsersInfoDB(email);
@@ -154,7 +158,6 @@ function signUp_user(){
       alert("submitted");
       location.reload();
     }
-  }
 }
 
 function isValidName(name) {
