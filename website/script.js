@@ -97,7 +97,6 @@ function calculateBMI() {
 
 /*========================Print info func=============================*/
 function PrintUserInfo(){
-  debugger;
   var outputdata=document.getElementById("information");
   var userData=CheckUsersInfoDB(CheckUserConnect());
   var text = `Name: ${userData[2]} ${userData[3]}<br>Email: ${userData[0]}<br>Age: ${userData[4]}<br>Height: ${userData[5]}<br>Weight: ${userData[6]}<br>Gender: ${userData[7]}`;
@@ -195,4 +194,7 @@ function LogOutUser(){
 }
 
 /*=============remove account============*/
-
+function deleteAccount(){
+  var userData=CheckUsersInfoDB(CheckUserConnect());
+  localStorage.removeItem(userData);
+}
