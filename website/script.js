@@ -53,6 +53,10 @@ function showTab(tabName) {
   
   var selectedTab = document.getElementById(tabName);
   selectedTab.classList.add('active');
+
+  if (tabName === 'information') {
+    PrintUserInfo();
+  }
 }
 
 
@@ -88,6 +92,16 @@ function calculateBMI() {
       bmiResult += "You are obese.";
   }
   document.getElementById('result').innerHTML = bmiResult;
+}
+
+
+/*========================Print info func=============================*/
+function PrintUserInfo(){
+  debugger;
+  var outputdata=document.getElementById("information");
+  var userData=CheckUsersInfoDB(CheckUserConnect());
+  var text = `Name: ${userData[2]} ${userData[3]}<br>Email: ${userData[0]}<br>Age: ${userData[4]}<br>Height: ${userData[5]}<br>Weight: ${userData[6]}<br>Gender: ${userData[7]}`;
+  outputdata.innerHTML='<h2>My Information</h2>'+text;
 }
 
 
@@ -170,4 +184,6 @@ function LogOutUser(){
   alert("Logged out successfully!");
   window.location.href = "main_page.html";
 }
+
+/*=============remove account============*/
 
