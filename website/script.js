@@ -143,9 +143,18 @@ function signUp_user(){
   }
   else
   {
-    processInfo(email,password, firstName, lastName, age, gen, height, weight);
-    alert("submitted");
-    location.reload();
+    //singelton - check if a new user signup Email is already taken
+    var userData = ""
+    userData = CheckUsersInfoDB(email);
+    if (userData != ""){
+      alert("This Email is already taken! please re-enter")
+      location.reload();
+    }
+    else{
+      processInfo(email,password, firstName, lastName, age, gen, height, weight);
+      alert("submitted");
+      location.reload();
+    }
   }
 }
 
