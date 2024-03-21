@@ -196,5 +196,5 @@ function LogOutUser(){
 /*=============remove account============*/
 function deleteAccount(){
   var userData=CheckUsersInfoDB(CheckUserConnect());
-  localStorage.removeItem(userData);
+  localStorage.removeItem(userData[0]);
 }
