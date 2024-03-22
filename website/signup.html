@@ -50,14 +50,24 @@
         <b>Email</b><br>
         <input type="text" id="Email" name="Email"><br><br>
         <b>Password</b><br>
-        <input type="text" id="password" name="Password"><br><br>
+        <input type="password" id="password" name="Password" oninput="checkPasswordStrength()"><br>
+        <div id="password-strength-meter"></div><br><br> <!-- Password strength meter -->
+        <div id="password-requirements">
+          <ul>
+              <li><span class="requirement">Password must be at least 8 characters long</span></li>
+              <li><span class="requirement">Password must contain at least one uppercase letter</span></li>
+              <li><span class="requirement">Password must contain at least one lowercase letter</span></li>
+              <li><span class="requirement">Password must contain at least one number</span></li>
+              <li><span class="requirement">Password may contain special characters</span></li>
+          </ul>
+      </div>
         <b>Gender:</b><br>
         <select id="gender" name="gender">
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="other">Other</option>
         </select><br><br>
-        <button type="button" onclick="signUp_user()">submit</button>
+        <button type="button" onclick="signUp_user()">Submit</button>
         <br><br><br>
     </form>
     <script src="script.js"></script>

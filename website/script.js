@@ -44,6 +44,67 @@ function phoneMenu() {
   }
 }
 
+function checkPasswordStrength() {
+  var password = document.getElementById("password").value;
+  var meter = document.getElementById("password-strength-meter");
+  var strength = 0;
+  var requirements = document.querySelectorAll("#password-requirements li span.requirement");
+  if (password.length >= 8) {
+    strength += 1;
+    requirements[0].classList.add("completed");
+  } else {
+    requirements[0].classList.remove("completed");
+  }
+
+  // check if password contains uppercase letter
+  if (/[A-Z]/.test(password)) {
+    strength += 1;
+    requirements[1].classList.add("completed");
+  } else {
+    requirements[1].classList.remove("completed");
+  }
+
+  // check if password contains lowercase letter
+  if (/[a-z]/.test(password)) {
+    strength += 1;
+    requirements[2].classList.add("completed");
+  } else {
+    requirements[2].classList.remove("completed");
+  }
+
+  // check if password contains number
+  if (/\d/.test(password)) {
+    strength += 1;
+    requirements[3].classList.add("completed");
+  } else {
+    requirements[3].classList.remove("completed");
+  }
+
+  // check if password contains special character (!,@,#,....)
+  if (/[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password)) {
+    strength += 1;
+    requirements[4].classList.add("completed");
+  } else {
+    requirements[4].classList.remove("completed");
+  }
+
+  // update strength meter based on calculated strength
+  switch (strength) {
+    case 0:
+    case 1:
+      meter.className = "strength weak";
+      meter.textContent = "Weak";
+      break;
+    case 2:
+      meter.className = "strength medium";
+      meter.textContent = "Medium";
+      break;
+    default:
+      meter.className = "strength strong";
+      meter.textContent = "Strong";
+  }
+  meter.style.width = (strength)*20 + '%'; // width of the meter adjusts according to the current password strength
+}
 
 function showTab(tabName) {
   var tabs = document.querySelectorAll('.tab');
