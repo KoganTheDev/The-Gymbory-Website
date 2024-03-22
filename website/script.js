@@ -100,7 +100,7 @@ function PrintUserInfo(){
   var outputdata=document.getElementById("information");
   var userData=CheckUsersInfoDB(CheckUserConnect());
   var text = `Name: ${userData[2]} ${userData[3]}<br>Email: ${userData[0]}<br>Age: ${userData[4]}<br>Height: ${userData[5]}<br>Weight: ${userData[6]}<br>Gender: ${userData[7]}`;
-  outputdata.innerHTML='<h2>My Information</h2>'+text;
+  outputdata.innerHTML='<h2>My Information</h2>'+text+'<br><button type="button" onclick="deleteAccount()">Delete Account</button>';
 }
 
 
@@ -115,7 +115,6 @@ function signUp_user(){
   var password = document.getElementById("password").value;
   var gen = document.getElementById("gender").value;
 
-  
   if (!isValidName(firstName)) {
     alert("Invalid First name. Please try again");
     return;
@@ -172,6 +171,7 @@ function isValidEmail(email) {
 /*===============================login and logout functions===========================*/
 
 function connect_Func(){
+  debugger;
   var login_mail = document.getElementById("Email").value;
   var login_password = document.getElementById("myInput").value;
   var userData = CheckUsersInfoDB(login_mail);
@@ -189,7 +189,6 @@ function connect_Func(){
 }
 
 function LogOutUser(){
-  debugger;
   var account_name=CheckUserConnect();
   ChangeStat(account_name,false);
   alert("Logged out successfully!");
@@ -200,4 +199,6 @@ function LogOutUser(){
 function deleteAccount(){
   var userData=CheckUsersInfoDB(CheckUserConnect());
   localStorage.removeItem(userData[0]);
+  alert("Account removed succefuly!");
+  window.location.href = "main_page.html";
 }
