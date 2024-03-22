@@ -20,7 +20,7 @@ function stringify(email,password, firstName, lastName, age, gen, height, weight
 	return dbStr;	
 }
 
-function stringify_Change(email,password, firstName, lastName, age, gen, height, weight) {
+function stringify_Change(email,password, firstName, lastName, age, height, weight, gen) {
     var emailStr = 'email: ' + email;
     var passwordStr = 'password: ' + password; 
 	var fnameStr = 'fname: ' + firstName;
