@@ -217,6 +217,7 @@ function signUp_user(){
         location.reload;
       }
       else{
+        //create thefirst and only admin account
         processInfo(email,password, firstName, lastName, age, gen, height, weight);
         alert("A new admin account is submitted");
         location.reload();
