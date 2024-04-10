@@ -206,18 +206,36 @@ function signUp_user(){
     alert("Invalid Email address. Please try again.");
     return;
   }
-    //singelton - check if a new user signup Email is already taken
+    //singelton - create 1 manager account and stop other attempts to create another one
+    var mngrFname = firstName;
+    var mngrLname = lastName;
+    if (mngrFname === "admin" && mngrLname === "admin"){
+      mngrData = CheckUsersInfoDB(email);
+      //if admin account is exist
+      if (mngrData != ""){
+        alert("A manager account already exist! You can't create Another one.");
+        location.reload;
+      }
+      else{
+        processInfo(email,password, firstName, lastName, age, gen, height, weight);
+        alert("A new admin account is submitted");
+        location.reload();
+      }
+    } 
+    if (firstName != "admin"){
+      //check if a new user signup Email is already taken
     var userData = ""
     userData = CheckUsersInfoDB(email);
-    if (userData != ""){
+    if(userData != ""){
       alert("This Email is already taken! please re-enter")
       location.reload();
     }
     else{
       processInfo(email,password, firstName, lastName, age, gen, height, weight);
-      alert("submitted");
+      alert("A new user account is submitted");
       location.reload();
     }
+    }   
 }
 
 function isValidName(name) {
@@ -227,6 +245,10 @@ function isValidName(name) {
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 } // this function checks if the email complies to the standard form of an email address.
+
+
+
+
 
 
 /*===============================login and logout functions===========================*/
