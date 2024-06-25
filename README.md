@@ -12,7 +12,7 @@ This project is being developed by a team of 6 talented individuals who are pass
 - Yaniv Bodga
 - Benaya Leib
 - Almog Raz
-- Itay
+- Itay Fisch
 - Eden Moshe
 
 ## Project Overview
