@@ -4,7 +4,7 @@
   <img src="https://github.com/KoganTheDev/architecture_Task1/blob/3c5b2b712f6fac6673b863ba2aa5a0c798ff3179/images%26gifs/Penguin%20Coding.gif" alt="Penguin writes code" width="400"/>
 </p>  
 
-Welcome to **The Gymbory Website!** 🚀 Our mission is to craft a **visually stunning, responsive, and user-friendly** web experience.  
+Welcome to **The Gymbory Website!** 🏋️ Our mission is to craft a **visually stunning, responsive, and user-friendly** web experience.  
 
 ---
 
