@@ -8,6 +8,14 @@ Welcome to **The Gymbory Website!** 🏋️ Our mission is to craft a **visually
 
 ---
 
+## 📹 Demo Video
+
+[![Watch the demo](https://img.youtube.com/vi/P0n7PPr9cf0/0.jpg)](https://www.youtube.com/watch?v=P0n7PPr9cf0)
+
+[watch on YouTube](https://www.youtube.com/watch?v=P0n7PPr9cf0)
+
+---
+
 ## 👥 Team Members  
 
 Meet the talented developers behind this project:  
